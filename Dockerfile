@@ -7,6 +7,6 @@ ADD https://www.free-css.com/assets/file/free-css-templates/download/page247/kin
 WORKDIR /var/www/html
 RUN unzip kindle.zip
 RUN cp -rvf markups-kindle/* .
-RUN rm -rf _MACOSX markups-kindle kindle.zip
+RUN rm -rf markups-kindle kindle
 CMD [*/usr/sbin/httpd*, "-D" , "FOREGROUND"]
 EXPOSE 80
